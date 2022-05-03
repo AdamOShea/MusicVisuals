@@ -12,12 +12,33 @@ Student Number: C20703429, C20372181, C20424992
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
 
 # Description of the assignment
-
+For my portion of the assignment, I decided to create a few visuals that are each based around a shape. I wanted the shape to grow everytime there is a beat in the song until it hits the borders of the screen. Once fully grown, the shape resets to its beginning size and its colour is changed. The background also changes colour with the shape but with a smaller opacity so that the colour in the shape is more prominent. In the centre of each visual is a rotating spiral of dots that grows and retracts with the amplitude analysed from the song. 
 # Instructions
+Press a corresponding number on your keyboard to change the visual.
 
+| Keycode | Visual |
+|---------|-----------|
+| '1' | Centred Circle |
+| '2' | Rectangles  |
+| '3' | Hourglass Shape |
 # How it works
+In order to make shapes react to the beats in the song I used the isKick() method from ddf and made it increment a variable.
+![image](https://user-images.githubusercontent.com/72108585/166341497-255b9695-edcd-452b-87b4-10c219fd7372.png)
+
+The first visual is simply a circle that grows from the centre. Once its radius is more than the width of the screen it resets and reassignColours() is called to change its colour.
+![image](https://user-images.githubusercontent.com/72108585/166342865-679a8c88-6952-42f3-b0d3-fbcc6eb6e7c7.png)
+
+The second visual contains 4 rectangles that grow from the corners of the screen to the centre where the overlap to make the colour more prominent. They reset once they have fully overlapped.
+![image](https://user-images.githubusercontent.com/72108585/166343026-c397a18f-3566-4e4d-ad87-e1b10ed94eb5.png)
+
+The third visual is a series of triangles that are mirrored to create an hourglass shape. The visual is also rotates around the centre point.
+![image](https://user-images.githubusercontent.com/72108585/166343302-4bfc366a-4e81-4791-89fb-22ad05402083.png)
+
+For the spiral that is featured in each of the visuals I used the getSmoothedAmplitude() method to make the points expand and retract whenever there is a beat in the song. I used cos and sin to make the lines of dots curve. I also made them rotate 
+![image](https://user-images.githubusercontent.com/72108585/166343879-4b0effde-b771-45d6-a456-817fc41c4c13.png)
 
 # What I am most proud of in the assignment
+I am especially proud of figuring out how to make the spiral. It was quite tricky for me as I have never had a great grasp on using trigonometric methods. I really like it because it kind of resembles the front of a big speaker which I think is very fitting for this assignment.
 
 # Markdown Tutorial
 
